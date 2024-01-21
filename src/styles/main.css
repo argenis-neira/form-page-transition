@@ -9,12 +9,19 @@
   height: 30px;
   border-radius: 50%;
   background-color: #fff;
-  border: 2px solid #007bff;
+  border: 2px solid #e9ecef;
   line-height: 30px;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 10px;
+}
+
+.step-check {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
   margin-bottom: 10px;
 }
 
@@ -24,7 +31,7 @@
   left: 50px;
   width: calc(100% - 100px);
   height: 2px;
-  background-color: #007bff;
+  background-color: #ec1c24;
   z-index: -1;
 }
 

@@ -7,7 +7,6 @@ import Page3 from "./components/page3";
 
 const Index = () => {
   const [percentage, setPercentage] = useState(0)
-  // const [page, setPage] = useState(1)
 
   const multiStepRef = useRef(null)
 
@@ -15,9 +14,7 @@ const Index = () => {
     //Ocultar el resto de paginas, solo mostrar la primera
     const multiStepForm = multiStepRef.current;
     const steps = multiStepForm.querySelectorAll('.step');
-    for (let i = 1; i < steps.length; i++) {
-      steps[i].style.display = 'none';
-    }
+    steps[0].style.display = '';
 
   }, [])
 
@@ -45,13 +42,13 @@ const Index = () => {
       <Bar percentage={percentage} />
 
       <div ref={multiStepRef}>
-        <div className="step">
+        <div className="step" style={{ display: "none" }}>
           <Page1 nextPage={NextPage} />
         </div>
-        <div className="step">
+        <div className="step" style={{ display: "none" }}>
           <Page2 nextPage={NextPage} />
         </div>
-        <div className="step">
+        <div className="step" style={{ display: "none" }}>
           <Page3 />
         </div>
 
