@@ -1,0 +1,44 @@
+.step-container {
+  position: relative;
+  text-align: center;
+  transform: translateY(-43%);
+}
+
+.step-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #007bff;
+  line-height: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.step-line {
+  position: absolute;
+  top: 16px;
+  left: 50px;
+  width: calc(100% - 100px);
+  height: 2px;
+  background-color: #007bff;
+  z-index: -1;
+}
+
+/* Animacion de transicion de paginas */
+.step {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.fade-out-left {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+.fade-in-right {
+  transform: translateX(100px);
+  opacity: 0;
+}
